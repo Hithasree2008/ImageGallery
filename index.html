@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore the beauty of the world</p>
+    </header>
+
+    <div class="filters">
+        <button class="active" onclick="filterImages('all', this)">All</button>
+        <button onclick="filterImages('nature', this)">Nature</button>
+        <button onclick="filterImages('animals', this)">Animals</button>
+        <button onclick="filterImages('flowers', this)">Flowers</button>
+    </div>
+
+    <div class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600"
+             class="nature" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600"
+             class="nature" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600"
+             class="animals" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600"
+             class="animals" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600"
+             class="flowers" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=600"
+             class="flowers" onclick="openLightbox(this)">
+
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <button class="nav prev" onclick="changeImage(-1)">&#10094;</button>
+
+        <img id="lightbox-img" src="" alt="Selected image">
+
+        <button class="nav next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>© 2026 My Image Gallery | Designed using HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
